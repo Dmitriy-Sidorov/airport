@@ -1,14 +1,12 @@
 import React from 'react'
 import { IAirport } from '../models/models'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 interface AirportCardProps {
 	airport: IAirport
 }
 
 export function AirportCard({ airport }: AirportCardProps) {
-	const param = useParams()
-	console.log(param.id)
 	return (
 		<Link to={`/airport/${airport.id}`}
 		      className="block border py-4 px-6 mb-2 cursor-pointer hover:shadow-lg hover:transition-all rounded-md">

@@ -17,6 +17,11 @@ const initialState: AirportState = {
 	error: ''
 }
 
+interface AirportPayload {
+	airports: IAirport[]
+	count: number
+}
+
 export const airportSlice = createSlice({
 	name: 'airport',
 	initialState,
@@ -24,9 +29,10 @@ export const airportSlice = createSlice({
 		fetching(state) {
 			state.loading = true
 		},
-		fetchSuccess(state, action: PayloadAction<IAirport[]>) {
+		fetchSuccess(state, action: PayloadAction<AirportPayload>) {
 			state.loading = false
-			state.airports = action.payload
+			state.airports = action.payload.airports
+			state.count = action.payload.count
 		},
 		fetchError(state, action: PayloadAction<Error>) {
 			state.loading = false

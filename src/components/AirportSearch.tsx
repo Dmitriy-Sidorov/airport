@@ -6,7 +6,7 @@ export function AirportSearch() {
 			<input
 				className="border px-4 py-2 w-full outline-0 h-[42px]"
 				type="text"
-				value=""
+				value="1"
 				placeholder="Search for airport..."
 			/>
 		</div>
