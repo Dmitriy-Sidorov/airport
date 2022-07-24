@@ -17,11 +17,6 @@ const initialState: AirportState = {
 	error: ''
 }
 
-interface AirportPayload {
-	airports: IAirport[]
-	count: number
-}
-
 export const airportSlice = createSlice({
 	name: 'airport',
 	initialState,
