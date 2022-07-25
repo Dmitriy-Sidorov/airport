@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import { fetchAirports } from '../store/actions/AirportActions'
+import { fetchAirports } from '../store/actions/AirportsActions'
 import { useAppDispatch, useAppSelector } from '../hook/redux'
 // import { AirportSearch } from '../components/AirportSearch'
 import { AirportFilter } from '../components/AirportFilter'
