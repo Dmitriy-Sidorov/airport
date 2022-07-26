@@ -6,6 +6,7 @@ import { AirportFilter } from '../components/AirportFilter'
 import { AirportCard } from '../components/AirportCard'
 import { Spinner } from '../components/Spinner'
 import ReactPaginate from 'react-paginate'
+import { AirportSearch } from '../components/AirportSearch'
 
 const ITEMS_PER_PAGE = 50
 
@@ -27,7 +28,7 @@ export function MainPage() {
 	return (
 		<div className="container mx-auto p-4 flex justify-center">
 			<div>
-				{/*<AirportSearch/>*/ }
+				<AirportSearch/>
 				<AirportFilter/>
 
 				<div className="min-w-[760px]">
