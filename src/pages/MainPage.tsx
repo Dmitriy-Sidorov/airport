@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from 'react'
 import { fetchAirports } from '../store/actions/AirportsActions'
 import { useAppDispatch, useAppSelector } from '../hook/redux'
-// import { AirportSearch } from '../components/AirportSearch'
 import { AirportFilter } from '../components/AirportFilter'
 import { AirportCard } from '../components/AirportCard'
 import { Spinner } from '../components/Spinner'
 import ReactPaginate from 'react-paginate'
 import { AirportSearch } from '../components/AirportSearch'
+import { fetchHandbooks } from '../store/actions/HandbooksActions'
 
 const ITEMS_PER_PAGE = 50
 
@@ -18,6 +18,7 @@ export function MainPage() {
 
 	useEffect(() => {
 		dispatch(fetchAirports(page.current, ITEMS_PER_PAGE))
+		dispatch(fetchHandbooks())
 	}, [dispatch])
 
 	const pageChangeHandler = ({selected}: {selected: number}) => {
